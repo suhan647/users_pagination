@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import "../App.scss";
 import axios from 'axios';
 import UserCard from "./UserCard";
-
+ 
 function Users() {
   const [users, setUsers] = useState([]);
   const [nextId, setNextId] = useState(10);
@@ -30,7 +30,7 @@ function Users() {
 
   return (
     <div className="app-container">
-      <h1>Users</h1>
+      <h1 className="title">Users</h1>
       <div className="users-container">
 
         {isLoading ? (
@@ -46,10 +46,10 @@ function Users() {
       </div>
       <div className="pagination-container">
         <button className="btn-prev" onClick={handlePrev} disabled={nextId === 0}>
-          Previous
+          <span>Previous</span>
         </button>
         <button className="btn-next" onClick={handleNext}>
-          Next
+          <span>Next</span>
         </button>
       </div>
     </div> 

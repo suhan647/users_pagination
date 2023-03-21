@@ -1,0 +1,106 @@
+.user-card {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 5px #ccc;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #ccc;
+  transition: background-color 1.10s ease-in-out;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.card-header p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.card-body small {
+  color: #888;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.user-card:nth-child(odd) {
+  animation: slideIn 1s ease forwards;
+}
+
+.user-card:nth-child(even) {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.user-card:nth-child(odd) .card-header {
+  animation: fadeIn 1s ease forwards;
+}
+
+.user-card:nth-child(even) .card-header {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+  .job-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .user-card:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .user-card:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .card-header:hover {
+    background-color: #0069d9;
+  }
+          

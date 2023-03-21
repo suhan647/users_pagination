@@ -1,11 +1,18 @@
 import React from "react";
+import './UserCard.scss';
 
 function UserCard({ user }) {
   return (
     <div className="user-card">
-      <h2>{user.FirstNameLastName}</h2>
-      <p>Email: {user.Email}</p>
-      <p>Phone: {user.Phone}</p>
+      <div className="card-header">
+        <h2 className="user-name">{user.FirstNameLastName}</h2>
+        <p className="job-title">{user.JobTitle}</p>
+      </div>
+      <div className="card-body">
+        <p>Email: <small>{user.Email}</small></p>
+        <p>Phone: <small>{user.Phone}</small></p>
+        <p>Company:<small> {user.Company}</small></p>
+      </div>
     </div>
   );
 }

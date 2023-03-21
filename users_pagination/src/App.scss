@@ -1,17 +1,15 @@
 .app-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   font-family: Arial, sans-serif;
-  width:'100%';
 }
 
 .users-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   margin-top: 1rem;
-  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -21,24 +19,41 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .users-container { 
+  .users-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .user-card {
+  background-color: #fff;
+  border-radius: 1rem;
   padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
   box-shadow: 2px 2px 5px #ccc;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 10px #ccc;
 }
 
 .user-card h2 {
-  margin-top: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .user-card p {
   margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.user-card small {
+  color: #888;
 }
 
 .pagination-container {
@@ -71,15 +86,14 @@
   margin-left: auto;
 }
 
-
 .loader-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100%;
   width: 100%;
-  margin-top: 2rem; /* Add margin to separate the loader from the users container */
-  text-align: center; /* Center the loader horizontally */
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .loader {
@@ -94,7 +108,6 @@
   z-index: 9999;
 }
 
-
 .loader:before {
   content: "";
   display: block;
@@ -105,6 +118,7 @@
   border-top-color: #007bff;
   animation: spin 1s ease-in-out infinite;
 }
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
