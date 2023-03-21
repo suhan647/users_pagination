@@ -30,7 +30,7 @@ function Users() {
 
   return (
     <div className="app-container">
-      <h1 className="title">Users</h1>
+      <h1 className="title">Users List</h1>
       <div className="users-container">
 
         {isLoading ? (
