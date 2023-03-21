@@ -1,4 +1,3 @@
-import "./App.scss";
 import Users from "./components/Users";
 
 function App() {

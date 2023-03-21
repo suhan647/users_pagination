@@ -1,5 +1,5 @@
 import React from "react";
-import './UserCard.scss';
+import './UserCard.css';
 
 function UserCard({ user }) {
   return (

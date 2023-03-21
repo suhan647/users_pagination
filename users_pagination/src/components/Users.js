@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "../App.scss";
+import "../App.css";
 import axios from 'axios';
 import UserCard from "./UserCard";
  
