@@ -5,7 +5,7 @@ import UserCard from "./UserCard";
  
 function Users() {
   const [users, setUsers] = useState([]);
-  const [nextId, setNextId] = useState(10);
+  const [nextId, setNextId] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchUsers = useCallback(async () => {
